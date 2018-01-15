@@ -140,9 +140,7 @@ SET(SERVER_A
 	./src/rpcblockchain.cpp
 	./src/rpcclient.cpp
 	./src/rpcdump.cpp
-	./src/rpcmasternode-budget.cpp
-	./src/rpcmasternode.cpp
-	./src/rpcmining.cpp
+    ./src/rpcmining.cpp
 	./src/rpcmisc.cpp
 	./src/rpcnet.cpp
 	./src/rpcrawtransaction.cpp

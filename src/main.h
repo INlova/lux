@@ -51,6 +51,8 @@ class CValidationState;
 struct CBlockTemplate;
 struct CNodeStateStats;
 
+#define START_MASTERNODE_PAYMENTS 1432907775
+
 /** Default for -blockmaxsize and -blockminsize, which control the range of sizes the mining code will create **/
 static const unsigned int DEFAULT_BLOCK_MAX_SIZE = 6000000;
 static const unsigned int DEFAULT_BLOCK_MIN_SIZE = 0;
@@ -240,6 +242,7 @@ inline unsigned int GetTargetSpacing(int nHeight) { return IsProtocolV2(nHeight)
 bool ActivateBestChain(CValidationState& state, CBlock* pblock = NULL);
 CAmount GetBlockValue(int nHeight);
 CAmount GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight);
+bool IsBlockValueValid(const CBlock& block, int64_t nExpectedValue);
 
 /** Create a new block index entry for a given block hash */
 CBlockIndex* InsertBlockIndex(uint256 hash);
